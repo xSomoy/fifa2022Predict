@@ -1,0 +1,1 @@
+gs_channels="insight_david_beckham,neg_ttd,pr_nations_league,european_destinations,pr_test1,pr_test2,gv_safe,gb_safe,telegraph_safe,pr_champions_league,gs_sport,golf_ryder_cup_sep18,test_predicts,pr_brandsafety_test";
