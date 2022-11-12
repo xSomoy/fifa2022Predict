@@ -6,18 +6,18 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <script async="" type="text/javascript"
-    src="./assets/cx.cce.js.download"></script>
+    src="./assets/cx.cce.js"></script>
   <script type="text/javascript" async=""
-    src="./assets/tinypass.min.js.download"></script>
+    src="./assets/tinypass.min.js"></script>
   <iframe src="javascript:void(0)" title="" role="presentation"
     style="width: 0px; height: 0px; border: 0px; display: none;"
     src="./assets/saved_resource.html"></iframe>
   <script type="text/javascript" async=""
-    src="./assets/quantum-telegraph.js.download"></script>
+    src="./assets/quantum-telegraph.js"></script>
   <script async=""
-    src="./assets/fbevents.js.download"></script>
+    src="./assets/fbevents.js"></script>
   <script
-    src="./assets/core.min.5-149--1.js.download"></script>
+    src="./assets/core.min.5-149--1.js"></script>
   <script>
     window.tmgFacebookAppId = "1785449471702494";
   </script>
@@ -43,12 +43,12 @@
     content="/etc/designs/telegraph/core/clientlibs/core/icons/mstile-70x70.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   <script>(() => { "use strict"; var e, r = {}, t = {}; function o(e) { var n = t[e]; if (void 0 !== n) return n.exports; var i = t[e] = { exports: {} }; return r[e].call(i.exports, i, i.exports, o), i.exports } o.m = r, e = [], o.O = (r, t, n, i) => { if (!t) { var l = 1 / 0; for (s = 0; s < e.length; s++) { for (var [t, n, i] = e[s], a = !0, u = 0; u < t.length; u++)(!1 & i || l >= i) && Object.keys(o.O).every((e => o.O[e](t[u]))) ? t.splice(u--, 1) : (a = !1, i < l && (l = i)); if (a) { e.splice(s--, 1); var f = n(); void 0 !== f && (r = f) } } return r } i = i || 0; for (var s = e.length; s > 0 && e[s - 1][2] > i; s--)e[s] = e[s - 1]; e[s] = [t, n, i] }, o.n = e => { var r = e && e.__esModule ? () => e.default : () => e; return o.d(r, { a: r }), r }, o.d = (e, r) => { for (var t in r) o.o(r, t) && !o.o(e, t) && Object.defineProperty(e, t, { enumerable: !0, get: r[t] }) }, o.g = function () { if ("object" == typeof globalThis) return globalThis; try { return this || new Function("return this")() } catch (e) { if ("object" == typeof window) return window } }(), o.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r), o.r = e => { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, (() => { var e = { 8: 0 }; o.O.j = r => 0 === e[r]; var r = (r, t) => { var n, i, [l, a, u] = t, f = 0; if (l.some((r => 0 !== e[r]))) { for (n in a) o.o(a, n) && (o.m[n] = a[n]); if (u) var s = u(o) } for (r && r(t); f < l.length; f++)i = l[f], o.o(e, i) && e[i] && e[i][0](), e[i] = 0; return o.O(s) }, t = self["tmg.build"] = self["tmg.build"] || []; t.forEach(r.bind(null, 0)), t.push = r.bind(null, t.push.bind(t)) })() })(); "use strict"; (self["tmg.build"] = self["tmg.build"] || []).push([[886, 2, 209], { 414: (t, e, i) => { i.d(e, { Z: () => s }); var r = i(453); class a { constructor(t) { this.params = Object.assign({ accordionSelector: "[data-accordion]", triggerSelector: "[data-accordion-trigger]", contentSelector: "[data-accordion-content]", hideClasses: ["accordion--is-collapsed"] }, t) } init() { const t = document.querySelectorAll(this.params.accordionSelector); t.length > 0 && t.forEach((t => { this.setTriggerListeners(t) })) } setTriggerListeners(t) { let e = t.querySelector(this.params.triggerSelector); e && e.addEventListener("click", (e => { const i = t.dataset.accordionAnimate, r = parseInt(t.dataset.accordionMaxScreenWidth); (0 === r || window.innerWidth < r) && (e.preventDefault(), i ? this.animateAccordion(t) : this.toggleClass(t), this.toggleState(t)) })) } toggleClass(t) { this.params.hideClasses.forEach((e => { t.classList.toggle(e) })) } toggleState(t) { const e = t.querySelector(this.params.contentSelector); null !== e.getAttribute("aria-hidden") && e.setAttribute("aria-hidden", "false" === e.getAttribute("aria-hidden") ? "true" : "false"); const i = t.querySelector(this.params.triggerSelector); null !== i.getAttribute("aria-expanded") && (i.setAttribute("aria-expanded", "false" === i.getAttribute("aria-expanded") ? "true" : "false"), this.toggleAccordionFocus(e, i)), null !== i.getAttribute("aria-label") && i.hasAttribute("toggle-aria-label") && this.toggleAriaLabel(i) } animateAccordion(t) { const e = document.getElementById(t.dataset.accordionAnimate), i = e.clientHeight, r = e.scrollHeight, a = !i, s = e.style.height; if (t.classList.toggle("accordion--animation-collapsed"), e.style.height = (a || !s ? r : 0) + "px", !s) return t.classList.toggle("accordion--animation-collapsed"), this.animateAccordion(t) } toggleAriaLabel(t) { const e = t.getAttribute("aria-label"), i = "Show", r = "Hide"; if (e.startsWith(i) || e.startsWith(r)) { const a = e.startsWith(i) ? e.replace(i, r) : e.replace(r, i); t.setAttribute("aria-label", a) } } toggleAccordionFocus(t, e) { "true" === e.getAttribute("aria-expanded") ? t.focus() : e.focus() } } r.Z.subscribe({ topic: "tmg.page.ready", func: () => { new a({ hideClasses: ["accordion--is-collapsed", "accordion--is-expanded"] }).init() }, runIfAlreadyPublished: !0 }); const s = a }, 453: (t, e, i) => { i.d(e, { Z: () => s }); var r = i(384); const a = new class { constructor() { this.topics = [], this.publishedTopics = [], this.UID = -1 } subscribe({ topic: t, func: e, runIfAlreadyPublished: i }) { if ("function" != typeof e) return !1; if (i) for (let i = 0; i < this.publishedTopics.length; i++)this.publishedTopics[i] === t && e.call(); const r = (this.UID += 1).toString(); return this.topics.push({ token: r, topic: t, func: e }), r } unsubscribe({ topic: t }) { for (let e = 0; e < this.topics.length; e++)this.topics[e].topic === t && this.topics.splice(e, 1) } publish({ topic: t }) { this.publishedTopics.push(t); for (let e = 0; e < this.topics.length; e++)this.topics[e].topic === t && this.topics[e].func.call() } }; r.Z.create("tmg.pubsub"), window.tmg.pubsub = a; const s = a }, 901: (t, e, i) => { i.r({}); i.r({}); var r = i(384), a = i(453); const s = new class { constructor(t) { this.queryParamArray = [t, "debug", "martech_debug"] } init() { this.disableConsoleLogs() } disableConsoleLogs() { this.isDebugging() || (console.log = function () { }) } isDebugging() { const t = new URLSearchParams(window.location.search); let e; return this.queryParamArray.forEach((i => { t.get(i) && (e = i) })), "true" === t.get(e) } }; class n { constructor() { r.Z.create("tmg.polyfill"), this.race() } static complete() { window.tmg.polyfill.complete = () => { }, a.Z.publish({ topic: "tmg.polyfill.ready" }) } race() { return setTimeout((() => { window.tmg.polyfill.complete() }), 3e3) } } new n, window.tmg.polyfill = { complete: n.complete }; var o = [], c = [], l = "RUM_start", u = window.performance || {}, d = Date.now ? Date.now() : +new Date; const g = () => { if (u) { if (u.now) return u.now(); if (u.webkitNow) return u.now(); if (u.msNow) return u.now(); if (u.mozNow) return u.now() } return (Date.now ? Date.now() : +new Date) - d }; function m(t) { return function (t, e) { for (var i = e.length - 1; i >= 0; i--) { var r = e[i]; if (t === r.name) return r } }(t, h()) } function h() { if (u) { if (u.getEntriesByType) return u.getEntriesByType("mark"); if (u.webkitGetEntriesByType) return u.webkitGetEntriesByType("mark") } return o } let p = { now: g, mark: function (t) { if (u) { if (u.mark) return u.mark(t); if (u.webkitMark) return u.webkitMark(t) } o.push({ name: t, entryType: "mark", startTime: g(), duration: 0 }) }, measure: function (t, e, i) { var r = 0, a = g(); if (void 0 === e && m(l) && (e = l), u) { if (u.measure) return e ? i ? u.measure(t, e, i) : u.measure(t, e) : u.measure(t); if (u.webkitMeasure) return u.webkitMeasure(t, e, i) } if (e) { var s = m(e); if (s) r = s.startTime; else { if (!(u && u.timing && u.timing[e])) return; r = u.timing[e] - u.timing.navigationStart } } if (i) { var n = m(i); if (n) a = n.startTime; else { if (!(u && u.timing && u.timing[i])) return; a = u.timing[i] - u.timing.navigationStart } } c.push({ name: t, entryType: "measure", startTime: r, duration: a - r }) }, marks: o, measures: c }; window.RUM = p, u && u.timing && u.timing.navigationStart && (d = u.timing.navigationStart), window.addEventListener("beforeunload", (function () { var t = function () { var t = document.cookie.match("(^|;)\\s*AMCV_2C7336C753C676BA0A490D4B%40AdobeOrg\\s*=\\s*([^;]+)"); return t ? decodeURIComponent(t.pop()).split("|")[4] : "" }(), e = h(); if (t && "ga" in window) for (var i = e.length - 1; i >= 0; i--) { var r = e[i], a = r.name.split("_"), s = a[0], n = a[1], o = a[2], c = Math.round(r.startTime); s && n && o && c && ga("send", { hitType: "timing", timingCategory: s, timingVar: n, timingValue: c, timingLabel: o }) } })); class f { constructor(t) { this.elements = (Array.isArray(t) ? t : [t]).filter(this.isValid) } init() { const t = /^((?!chrome|android).)*safari/i.test(navigator.userAgent), e = /^.*Mac.*Auth-Key/i.test(navigator.userAgent); if (!("loading" in HTMLImageElement.prototype) || t || e) { let t = this.createObserver(); this.elements.forEach((e => { t.observe(e, !1) })) } else this.elements.forEach((t => { this.createImage(t, !0) })) } createObserver() { return new IntersectionObserver(this.observerCallback.bind(this), { rootMargin: "100px 0px", threshold: .1 }) } observerCallback(t, e) { t.forEach((t => { if (t.isIntersecting) { let i = t.target; this.createImage(i), e.unobserve(i) } })) } isValid(t) { return !!t.dataset.src } createImage(t, e) { const i = document.createElement("img"); i.style.height = 0, e && i.setAttribute("loading", "lazy"), i.onload = this.displayImage(t, i), ["id", "srcset", "sizes", "alt", "title", "src", "class", "width", "height"].forEach((e => { t.hasAttribute("data-" + e) && (i.setAttribute(e, t.dataset[e]), t.removeAttribute(`data-${e}`)) })), i.classList.add("is-loading"), t.appendChild(i) } displayImage(t, e) { return () => { e.removeAttribute("style"), t.style.height = null, t.hasAttribute("data-persistpadding") || (t.style.paddingTop = null), e.classList.add("is-loaded"), e.classList.remove("is-loading"), t.classList.add("is-ready") } } } a.Z.subscribe({ topic: "tmg.page.ready", func: () => { const t = [...document.querySelectorAll('[data-js="LazyImage"]')], e = new f(t); let i = { createImage: e.createImage, displayImage: e.displayImage }; r.Z.create("tmg.lazyImage"), tmg.lazyImage = i, e.init() }, runIfAlreadyPublished: !0 }); var b = i(414); a.Z.subscribe({ topic: "tmg.polyfill.ready", func: () => { a.Z.publish({ topic: "tmg.page.ready" }) }, runIfAlreadyPublished: !0 }), new class { constructor(t) { this.selectorClass = t || "no-js", this.removeClass() } removeClass() { const t = document.querySelector(`.${this.selectorClass}`); t && t.classList.remove(this.selectorClass) } }, r.Z, a.Z, s.init(), b.Z }, 384: (t, e, i) => { i.d(e, { Z: () => a }), window.tmg = window.tmg || {}; const r = function (t) { try { let e = tmg, i = t.split("."); return "tmg" === i[0] && (i = i.slice(1)), i.forEach((t => { void 0 === e[t] && (e[t] = {}), e = e[t] })), e } catch (e) { console.warn("couldn't create namespace:", t) } }; window.tmg.createNamespace = r; const a = { create: r } } }, t => { t(t.s = 901) }]);</script>
-  <script src="./assets/polyfill.min.js.download"
+  <script src="./assets/polyfill.min.js"
     defer=""></script>
   <script>
     RUM.mark('js_load_polyfill');
   </script>
-  <script src="./assets/widgets.opta.js.download"
+  <script src="./assets/widgets.opta.js"
     defer=""></script>
   <script>
     window._optaParams = {
@@ -458,21 +458,21 @@
     window.clientlibs = { "css": {}, "js": { "respond_js": { "load": ["/etc/designs/telegraph/core/clientlibs/respond.min.5-149--1.js"], "test": "Modernizr.mq(\"only all\")" }, "json_js": { "load": ["/etc/designs/telegraph/core/clientlibs/json.min.5-149--1.js"], "test": "window.JSON" }, "core_js": { "load": ["/etc/designs/telegraph/core/clientlibs/core.min.5-149--1.js"] } } };
   </script>
   <script
-    src="./assets/head.min.5-149--1.js.download"></script>
+    src="./assets/head.min.5-149--1.js"></script>
   <script>
     RUM.mark('js_load_head');
   </script>
   <script
-    src="./assets/firestore.min.5-149--1.js.download"
+    src="./assets/firestore.min.5-149--1.js"
     defer=""></script>
   <script
-    src="./assets/mytelegraph.min.5-149--1.js.download"
+    src="./assets/mytelegraph.min.5-149--1.js"
     defer=""></script>
   <!-- Load Sourcepoint stub and call payload -->
   <script type="text/javascript">
     (function () { var e = false; var c = window; var t = document; function r() { if (!c.frames["__cmpLocator"]) { if (t.body) { var a = t.body; var e = t.createElement("iframe"); e.style.cssText = "display:none"; e.name = "__cmpLocator"; a.appendChild(e) } else { setTimeout(r, 5) } } } r(); function p() { var a = arguments; __cmp.a = __cmp.a || []; if (!a.length) { return __cmp.a } else if (a[0] === "ping") { a[2]({ gdprAppliesGlobally: e, cmpLoaded: false }, true) } else { __cmp.a.push([].slice.apply(a)) } } function l(t) { var r = typeof t.data === "string"; try { var a = r ? JSON.parse(t.data) : t.data; if (a.__cmpCall) { var n = a.__cmpCall; c.__cmp(n.command, n.parameter, function (a, e) { var c = { __cmpReturn: { returnValue: a, success: e, callId: n.callId } }; t.source.postMessage(r ? JSON.stringify(c) : c, "*") }) } } catch (a) { } } if (typeof __cmp !== "function") { c.__cmp = p; __cmp.msgHandler = l; c.addEventListener("message", l, false) } })();
   </script>
-  <script src="./assets/tmg-cmp.min.js.download"
+  <script src="./assets/tmg-cmp.min.js"
     defer=""></script>
   <script>
     window.clientlibs.js.twitter_js = {
@@ -653,7 +653,7 @@
     });
   </script>
   <script
-    src="./assets/satelliteLib-177113f60f763788009998023cd15615fe2168a2.js.download"
+    src="./assets/satelliteLib-177113f60f763788009998023cd15615fe2168a2.js"
     defer=""></script>
   <script>
     RUM.mark('js_load_dtm');
@@ -667,12 +667,12 @@
     var tmgAds = tmgAds || {};
     tmgAds.sticky = true;
   </script>
-  <script src="./assets/tmg-gpt.min.js.download"
+  <script src="./assets/tmg-gpt.min.js"
     defer=""></script>
   <script>
     RUM.mark('js_load_gpt');
   </script>
-  <script src="./assets/tmgrefresh.js.download"
+  <script src="./assets/tmgrefresh.js"
     defer=""></script>
   <script>
     RUM.mark('js_load_customer');
@@ -684,20 +684,20 @@
   <!-- comScore Identifier: comscorekw=clusterpages -->
 
   <!-- MarTech (Target) -->
-  <script src="./assets/core.min.js.download"
+  <script src="./assets/core.min.js"
     defer=""></script>
 
   <script>tmg.pianoCookie = "_utp";</script>
   <script
-    src="./assets/piano.min.5-149--1.js.download"
+    src="./assets/piano.min.5-149--1.js"
     defer=""></script>
 
 
   <script>!function (a) { var e = "https://s.go-mpulse.net/boomerang/", t = "addEventListener"; if ("False" == "True") a.BOOMR_config = a.BOOMR_config || {}, a.BOOMR_config.PageParams = a.BOOMR_config.PageParams || {}, a.BOOMR_config.PageParams.pci = !0, e = "https://s2.go-mpulse.net/boomerang/"; if (window.BOOMR_API_key = "GHENT-R5DY7-KAG4V-6EY7K-3RGVU", function () { function n(e) { a.BOOMR_onload = e && e.timeStamp || (new Date).getTime() } if (!a.BOOMR || !a.BOOMR.version && !a.BOOMR.snippetExecuted) { a.BOOMR = a.BOOMR || {}, a.BOOMR.snippetExecuted = !0; var i, _, o, r = document.createElement("iframe"); if (a[t]) a[t]("load", n, !1); else if (a.attachEvent) a.attachEvent("onload", n); r.src = "javascript:void(0)", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "width:0;height:0;border:0;display:none;", o = document.getElementsByTagName("script")[0], o.parentNode.insertBefore(r, o); try { _ = r.contentWindow.document } catch (O) { i = document.domain, r.src = "javascript:var d=document.open();d.domain='" + i + "';void(0);", _ = r.contentWindow.document } _.open()._l = function () { var a = this.createElement("script"); if (i) this.domain = i; a.id = "boomr-if-as", a.src = e + "GHENT-R5DY7-KAG4V-6EY7K-3RGVU", BOOMR_lstart = (new Date).getTime(), this.body.appendChild(a) }, _.write("<bo" + 'dy onload="document._l();">'), _.close() } }(), "".length > 0) if (a && "performance" in a && a.performance && "function" == typeof a.performance.setResourceTimingBufferSize) a.performance.setResourceTimingBufferSize(); !function () { if (BOOMR = a.BOOMR || {}, BOOMR.plugins = BOOMR.plugins || {}, !BOOMR.plugins.AK) { var e = "" == "true" ? 1 : 0, t = "", n = "34o5oddiivrx2y3pwmcq-f-090ad5109-clientnsv4-s.akamaihd.net", i = "false" == "true" ? 2 : 1, _ = { "ak.v": "33", "ak.cp": "1292881", "ak.ai": parseInt("148538", 10), "ak.ol": "0", "ak.cr": 51, "ak.ipv": 4, "ak.proto": "h2", "ak.rid": "488ea16e", "ak.r": 44715, "ak.a2": e, "ak.m": "a", "ak.n": "essl", "ak.bpcip": "223.29.215.0", "ak.cport": 26480, "ak.gh": "23.44.214.17", "ak.quicv": "", "ak.tlsv": "tls1.3", "ak.0rtt": "", "ak.csrc": "-", "ak.acc": "", "ak.t": "1668264709", "ak.ak": "hOBiQwZUYzCg5VSAfCLimQ==cKF2PZQY5BtloReeYTQ9TWQTuiY/GXE8ywJIvUtmhpjTOYoNJUvBbx8ggpu4VdaAqX88PEHj8MehYnpjywWBwgrEvT2Ik7jT7T+BRFts3IqyBVjoc92yiX06uD0rkw/MGF3FfsPrksetm56gmH2WYXHUgMqRHyF237MAyII8yVRAD3nExTgPx/H6QNecAQ185UNd+2D1gE9XPWbBIYCZ+gcsjVBUDXn29vOvImpEWxXcihPDtDkrcEFTD9RdGixDmBynbmXhxmR0QR3T8Qjese9WVTGO9/tF3V3yVIIeC+EcuZ7y3UdXohJMvyW63cZT95rVeyZAX2oSr4raOJ/Ib9xPCb05g6kwUrsA8SjJARB7GOnRR/diFgOc48pTxtsEkNMfgNTr8AsMflR4icHouuieG7wDRMPmXKFc1QqzBWo=", "ak.pv": "1306", "ak.dpoabenc": "", "ak.tf": i }; if ("" !== t) _["ak.ruds"] = t; var o = { i: !1, av: function (e) { var t = "http.initiator"; if (e && (!e[t] || "spa_hard" === e[t])) _["ak.feo"] = void 0 !== a.aFeoApplied ? 1 : 0, BOOMR.addVar(_) }, rv: function () { var a = ["ak.bpcip", "ak.cport", "ak.cr", "ak.csrc", "ak.gh", "ak.ipv", "ak.m", "ak.n", "ak.ol", "ak.proto", "ak.quicv", "ak.tlsv", "ak.0rtt", "ak.r", "ak.acc", "ak.t", "ak.tf"]; BOOMR.removeVar(a) } }; BOOMR.plugins.AK = { akVars: _, akDNSPreFetchDomain: n, init: function () { if (!o.i) { var a = BOOMR.subscribe; a("before_beacon", o.av, null, null), a("onbeacon", o.rv, null, null), o.i = !0 } return this }, is_complete: function () { return !0 } } } }() }(window);</script>
-  <script src="./assets/firebase-app.js.download"
+  <script src="./assets/firebase-app.js"
     defer="true"></script>
   <script
-    src="./assets/firebase-firestore.js.download"
+    src="./assets/firebase-firestore.js"
     defer="true"></script>
   <style>
     .footer-list-corporate__item:not(:last-child):after {
@@ -707,84 +707,84 @@
     }
   </style>
   <script
-    src="./assets/EX866115203ec341af98e71afe995af3fc-libraryCode_source.min.js.download"
+    src="./assets/EX866115203ec341af98e71afe995af3fc-libraryCode_source.min.js"
     async=""></script>
-  <script src="./assets/index.js.download"
+  <script src="./assets/index.js"
     defer="true"></script>
-  <script src="./assets/index.js(1).download"
+  <script src="./assets/index.js(1)"
     defer="true"></script>
-  <script src="./assets/index.js(2).download"
+  <script src="./assets/index.js(2)"
     defer="true"></script>
-  <script src="./assets/index.js(3).download"
+  <script src="./assets/index.js(3)"
     defer="true"></script>
-  <script src="./assets/index.js(4).download"
+  <script src="./assets/index.js(4)"
     defer="true"></script>
   <script src="./assets/load" defer="true"></script>
   <script
-    src="./assets/RC8b4e4529e59d433a9093c559403c1d21-source.min.js.download"
+    src="./assets/RC8b4e4529e59d433a9093c559403c1d21-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC0fcf26a25bef48dba4a9188a2c7c906b-source.min.js.download"
+    src="./assets/RC0fcf26a25bef48dba4a9188a2c7c906b-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC4bbc108e88c54c04a990c12e764fcca0-source.min.js.download"
+    src="./assets/RC4bbc108e88c54c04a990c12e764fcca0-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC196522a11d1a4e678ce58e6416ecddf5-source.min.js.download"
+    src="./assets/RC196522a11d1a4e678ce58e6416ecddf5-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC575f15ce13af4933b805b4f732675d4b-source.min.js.download"
+    src="./assets/RC575f15ce13af4933b805b4f732675d4b-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC22c7f2e6babe4dacb78107e8ec1d6721-source.min.js.download"
+    src="./assets/RC22c7f2e6babe4dacb78107e8ec1d6721-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC9b17c8d4d94f46beb2a10aabcdc02174-source.min.js.download"
+    src="./assets/RC9b17c8d4d94f46beb2a10aabcdc02174-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC69780b6521c24568b5d4c9348a13c2ec-source.min.js.download"
+    src="./assets/RC69780b6521c24568b5d4c9348a13c2ec-source.min.js"
     async=""></script>
   <script
-    src="./assets/RCfaa368ece45242059589f3289bfe066a-source.min.js.download"
+    src="./assets/RCfaa368ece45242059589f3289bfe066a-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC89de6b6c7e1d4cabb5a13115602b9973-source.min.js.download"
+    src="./assets/RC89de6b6c7e1d4cabb5a13115602b9973-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC7c42df026768466d9b147ce430e57954-source.min.js.download"
+    src="./assets/RC7c42df026768466d9b147ce430e57954-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC76637f0310884ffca278d9ea6c9e28e5-source.min.js.download"
+    src="./assets/RC76637f0310884ffca278d9ea6c9e28e5-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC0392241e4a1a46c2a1c36fb86deca2dd-source.min.js.download"
+    src="./assets/RC0392241e4a1a46c2a1c36fb86deca2dd-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC0e837c2e8e5744eba1be15ebe9c787b5-source.min.js.download"
+    src="./assets/RC0e837c2e8e5744eba1be15ebe9c787b5-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC27ef2087a2bc41cb8883677d330507ff-source.min.js.download"
+    src="./assets/RC27ef2087a2bc41cb8883677d330507ff-source.min.js"
     async=""></script>
   <script
-    src="./assets/RCe4039d5e273a4d9d8d97d1a17c25fd68-source.min.js.download"
+    src="./assets/RCe4039d5e273a4d9d8d97d1a17c25fd68-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC53e89aa5155a425ea85a94c3a8728c16-source.min.js.download"
+    src="./assets/RC53e89aa5155a425ea85a94c3a8728c16-source.min.js"
     async=""></script>
   <script
-    src="./assets/RCd54e9c42e0624ea0ad5b96782ea44321-source.min.js.download"
+    src="./assets/RCd54e9c42e0624ea0ad5b96782ea44321-source.min.js"
     async=""></script>
   <script
-    src="./assets/RCc138c3393f56415ebf739ba7b8ecca91-source.min.js.download"
+    src="./assets/RCc138c3393f56415ebf739ba7b8ecca91-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC881b1379813948198f454beee78d5ae4-source.min.js.download"
+    src="./assets/RC881b1379813948198f454beee78d5ae4-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC09b37a2738b34da0a924538aee2ab5bb-source.min.js.download"
+    src="./assets/RC09b37a2738b34da0a924538aee2ab5bb-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC03f9d55430c643e6bd83aecb6fb7fecf-source.min.js.download"
+    src="./assets/RC03f9d55430c643e6bd83aecb6fb7fecf-source.min.js"
     async=""></script>
   <style data-styled="active" data-styled-version="5.3.5"></style>
   <style type="text/css" data-rbd-always="0">
@@ -924,17 +924,17 @@
     }
   </style>
   <script type="text/javascript" id="google-gpt-lib" async=""
-    src="./assets/gpt.js.download"></script>
+    src="./assets/gpt.js"></script>
   <script type="text/javascript" id="grapeshot" async=""
     src="./assets/channels.cgi"></script>
   <script
-    src="./assets/RC98c44e6dac5743a0a5e1facddbf022ce-source.min.js.download"
+    src="./assets/RC98c44e6dac5743a0a5e1facddbf022ce-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC56d3454414af42728f2790911e24a6bf-source.min.js.download"
+    src="./assets/RC56d3454414af42728f2790911e24a6bf-source.min.js"
     async=""></script>
   <script
-    src="./assets/RCe44b75be4cd946f7869520b14c4ab1b6-source.min.js.download"
+    src="./assets/RCe44b75be4cd946f7869520b14c4ab1b6-source.min.js"
     async=""></script>
   <style type="text/css">
     .tp-backdrop {
@@ -1316,52 +1316,52 @@
     }
   </style>
   <script type="text/javascript" id="e8eaf546-a7b4-4d26-bc0a-3a71131d21c3" async=""
-    src="./assets/e8eaf546-a7b4-4d26-bc0a-3a71131d21c3-web.js.download"></script>
+    src="./assets/e8eaf546-a7b4-4d26-bc0a-3a71131d21c3-web.js"></script>
   <script
-    src="./assets/RC24acfc8c914b41d1a2e276ea5a6f4e42-source.min.js.download"
+    src="./assets/RC24acfc8c914b41d1a2e276ea5a6f4e42-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC8911ab3be7784ef28b0737d99a829ac8-source.min.js.download"
+    src="./assets/RC8911ab3be7784ef28b0737d99a829ac8-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC3c5709ffd83849f3a75f5b5be5c56030-source.min.js.download"
+    src="./assets/RC3c5709ffd83849f3a75f5b5be5c56030-source.min.js"
     async=""></script>
   <script
-    src="./assets/RCa6e728a7966645a695fa83e8cb40fdf9-source.min.js.download"
+    src="./assets/RCa6e728a7966645a695fa83e8cb40fdf9-source.min.js"
     async=""></script>
   <script
-    src="./assets/RCa78046a32202469d8aec484d71dc23e5-source.min.js.download"
+    src="./assets/RCa78046a32202469d8aec484d71dc23e5-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC389dd297bdd34955aa454fe260e4b968-source.min.js.download"
+    src="./assets/RC389dd297bdd34955aa454fe260e4b968-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC9adc729e117c429c884fc1a0432aad5b-source.min.js.download"
+    src="./assets/RC9adc729e117c429c884fc1a0432aad5b-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC74ccd98c127c4319849db6a67ff0ca70-source.min.js.download"
+    src="./assets/RC74ccd98c127c4319849db6a67ff0ca70-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC491e02043f874d0eaad6c672a295fe86-source.min.js.download"
+    src="./assets/RC491e02043f874d0eaad6c672a295fe86-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC4467b84a21da486094b00a6bc43ec0f8-source.min.js.download"
+    src="./assets/RC4467b84a21da486094b00a6bc43ec0f8-source.min.js"
     async=""></script>
   <script
-    src="./assets/RCc9ec28a365144ebfa67f130af9e226c5-source.min.js.download"
+    src="./assets/RCc9ec28a365144ebfa67f130af9e226c5-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC4eda2640463d4b7884a50b174ac02a3f-source.min.js.download"
+    src="./assets/RC4eda2640463d4b7884a50b174ac02a3f-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC7355c6e273804832be09d69a17dfcf29-source.min.js.download"
+    src="./assets/RC7355c6e273804832be09d69a17dfcf29-source.min.js"
     async=""></script>
   <script src="./assets/js" async=""></script>
   <script
-    src="./assets/RC230f0949d81e4e93abb04251b2d94dd1-source.min.js.download"
+    src="./assets/RC230f0949d81e4e93abb04251b2d94dd1-source.min.js"
     async=""></script>
   <script
-    src="./assets/RC9fde7dbffc69442084d12433bb4166ea-source.min.js.download"
+    src="./assets/RC9fde7dbffc69442084d12433bb4166ea-source.min.js"
     async=""></script>
   <link id="googleidentityservice" type="text/css" media="all" rel="stylesheet"
     href="./assets/style">
@@ -1889,7 +1889,7 @@
                     <link rel="manifest"
                       href="https://cf.eip.telegraph.co.uk/embeds/22__worldcup-predictor/manifest.json">
                     <script defer="defer"
-                      src="./assets/main.caa1c670.js.download"></script>
+                      src="./assets/main.caa1c670.js"></script>
                   </column>
                 </row>
                 <row data-layout="24" data-customlayout="" class="no-borders">
@@ -4055,14 +4055,14 @@
               </section>
             </section>
             <script language="javascript" type="text/javascript"
-              src="./assets/site-navigation.13f0ee8c.js.download"
+              src="./assets/site-navigation.13f0ee8c.js"
               async=""></script>
           </div>
           <script
-            src="./assets/0.0.1.js.download"></script>
+            src="./assets/0.0.1.js"></script>
           <script>window.atomId = 'ffd82d42-9fb2-44eb-8635-727a0887613b';</script>
           <script
-            src="./assets/aanalytics.js.download"
+            src="./assets/aanalytics.js"
             type="text/javascript" defer=""></script>
         </div>
       </div>
@@ -6813,7 +6813,7 @@
       }, 500)
     });</script>
   <script type="text/javascript"
-    src="./assets/tmgrefresh.js(1).download"
+    src="./assets/tmgrefresh.js(1)"
     async=""></script>
   <script>
     tmg.pubsub.subscribe({
@@ -7499,15 +7499,15 @@
     Some screen readers may require you to be in focus mode or to use your pass through key
   </div>
   <script type="text/javascript" id="prebid" async=""
-    src="./assets/prebidv6.3.0-pre.js.download"></script>
+    src="./assets/prebidv6.3.0-pre.js"></script>
   <div id="tmgMediaQuery"></div>
   <div class="pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links advert"
     style="position: absolute; left: 0px; top: 0px; height: 10px; z-index: -1;">&nbsp;</div>
   <script type="text/javascript" id="martech-one-tap-lib"
-    src="./assets/onetap.js.download" async=""
+    src="./assets/onetap.js" async=""
     defer=""></script>
   <script type="text/javascript"
-    src="./assets/tmguser.js.download" async=""
+    src="./assets/tmguser.js" async=""
     defer=""></script>
   <div id="g_id_onload" data-client_id="537085313350-c3frt0pajh077k8gvr6khb14f9eb7frp.apps.googleusercontent.com"
     data-prompt_parent_id="on_tap" data-auto_select="false" data-state_cookie_domain="telegraph.co.uk"
