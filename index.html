@@ -437,7 +437,7 @@
       width: 20px;
     }
 
-    .nf-is-app .onward,
+    .nf-is-app,
     .nf-is-app .site-footer {
       display: none;
     }
@@ -6514,46 +6514,7 @@
 
     }
   </script>
-  <script>_satellite["_runScript22"](function (event, target, Promise) {
-      if (webSDKSwitch == "true") {
 
-        var onwardjourney = _satellite.getVar("TMG onward journey");
-
-        if (typeof onwardjourney !== "undefined" && onwardjourney !== "") {
-
-          //s.eVar154 = onwardjourney;
-          //s.events = typeof s.events == 'undefined' ? 'event255' : s.events + ',' + 'event255';
-
-          eventContainer = {};
-
-          eventNameKey = "tempTargetEvent";
-
-          eventContainer[eventNameKey] = 1;
-
-          window.adobeDataLayer.push({
-            "ruleName": "TMG onward journey on evar154",
-            "event": "tempTargetEvent",
-            "_tmg": {
-              "eventContainer": eventContainer,
-              "pageInfo": {
-                "martechOnwardJourney": onwardjourney
-              }
-            }
-          })
-
-          xdmData = _satellite.getVar("ACDL Computed State");
-
-          alloy("sendEvent", {
-            "xdm": xdmData
-          })
-
-          _satellite.getVar("Reset Adobe Client Data Layer");
-          adobeDataLayer[0]._tmg.eventContainer = {};
-
-        }
-
-      }
-    });</script>
   <script>_satellite["_runScript23"](function (event, target, Promise) {
       var targetPianoPropensityCheck = 0;
 
